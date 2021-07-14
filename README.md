@@ -5,6 +5,7 @@
 [![Build](https://github.com/DoumanAsh/tracing-fmt-smart-writer/workflows/Rust/badge.svg)](https://github.com/DoumanAsh/tracing-fmt-smart-writer/actions?query=workflow%3ARust)
 
 Smarter writer builder for tracing-subscriber's fmt module
+Version corresponds to major [tracing-subscriber](https://crates.io/crates/tracing-subscriber) version.
 
 ## Usage
 
