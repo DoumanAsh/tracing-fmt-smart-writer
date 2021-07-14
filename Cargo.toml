@@ -1,0 +1,32 @@
+[package]
+name = "tracing-fmt-smart-writer"
+version = "0.2.0"
+authors = ["Douman <douman@gmx.se>"]
+edition = "2018"
+description = "Smart writer for tracing-subscriber's fmt module"
+license = "BSL-1.0"
+repository = "https://github.com/DoumanAsh/tracing-fmt-smart-writer"
+keywords = ["tracing", "stdio", "android"]
+readme = "README.md"
+include = [
+    "**/*.rs",
+    "Cargo.toml",
+    "README.md"
+]
+
+[dependencies.tracing-core]
+version = "0.1"
+default-features = false
+
+[dependencies.tracing-subscriber]
+version = "0.2"
+default-features = false
+features = ["fmt"]
+
+[target.'cfg(target_os = "android")'.dependencies.androidy-log]
+version = "1"
+features = ["std"]
+
+[target.'cfg(target_arch = "wasm32")'.dependencies.web-log]
+version = "1"
+features = ["std"]
