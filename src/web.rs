@@ -29,16 +29,16 @@ impl WriterBuilder {
     }
 }
 
-impl MakeWriter for WriterBuilder {
+impl MakeWriter<'_> for WriterBuilder {
     type Writer = Console;
 
     #[inline(always)]
-    fn make_writer(&self) -> Self::Writer {
+    fn make_writer(&'_ self) -> Self::Writer {
         Console::new(ConsoleType::Info)
     }
 
     #[inline(always)]
-    fn make_writer_for(&self, meta: &Metadata<'_>) -> Self::Writer {
+    fn make_writer_for(&'_ self, meta: &Metadata<'_>) -> Self::Writer {
         let level = meta.level();
         let prio = if level == &Level::ERROR {
             ConsoleType::Error

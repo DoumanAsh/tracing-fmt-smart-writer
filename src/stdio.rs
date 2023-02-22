@@ -3,7 +3,7 @@ extern crate std;
 use std::io;
 
 use tracing_subscriber::fmt::MakeWriter;
-use tracing_core::{Metadata};
+use tracing_core::Metadata;
 
 #[derive(Copy, Clone)]
 ///Stdio based writer builder.
@@ -26,16 +26,16 @@ impl Default for WriterBuilder {
     }
 }
 
-impl MakeWriter for WriterBuilder {
+impl MakeWriter<'_> for WriterBuilder {
     type Writer = io::Stdout;
 
     #[inline(always)]
-    fn make_writer(&self) -> Self::Writer {
+    fn make_writer(&'_ self) -> Self::Writer {
         io::stdout()
     }
 
     #[inline(always)]
-    fn make_writer_for(&self, _meta: &Metadata<'_>) -> Self::Writer {
+    fn make_writer_for(&'_ self, _meta: &Metadata<'_>) -> Self::Writer {
         io::stdout()
     }
 }

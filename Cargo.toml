@@ -1,6 +1,6 @@
 [package]
 name = "tracing-fmt-smart-writer"
-version = "0.2.0"
+version = "0.3.0"
 authors = ["Douman <douman@gmx.se>"]
 edition = "2018"
 description = "Smart writer for tracing-subscriber's fmt module"
@@ -19,7 +19,7 @@ version = "0.1"
 default-features = false
 
 [dependencies.tracing-subscriber]
-version = "0.2"
+version = "0.3"
 default-features = false
 features = ["fmt"]
 

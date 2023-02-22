@@ -1,4 +1,5 @@
-//!Smart writer for [FmtSubscriber](https://docs.rs/tracing-subscriber/0.2.19/tracing_subscriber/fmt/struct.Subscriber.html) in `tracing-subscriber`
+//!Smart writer for
+//![FmtSubscriber](https://docs.rs/tracing-subscriber/latest/tracing_subscriber/fmt/struct.Subscriber.html) in `tracing-subscriber`
 //!
 //!## Usage
 //!
